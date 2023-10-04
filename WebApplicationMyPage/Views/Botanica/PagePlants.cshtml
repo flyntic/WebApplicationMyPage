@@ -1,0 +1,17 @@
+﻿@using WebApplicationMyPage.Data;
+@model PageOfPlants
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Title</h1>
+    <div>@Model.Description</div>
+    @foreach(var item in Model.Plants)
+    {
+         <li class="nav-item">
+            <h3>@item.Title</h3>
+            <div>@item.Description</div>
+         </li> 
+    }
+</div>

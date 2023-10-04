@@ -1,0 +1,19 @@
+﻿@model BotanicaViewModel 
+@{
+    ViewData["Title"] = "Растения";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Растения</h1>
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @foreach (var item in @Model.PagesOfPlants)
+                       { 
+                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-route-id=@item.Id asp-area="" 
+                               asp-controller="Botanica" asp-action="PagePlants">@item.Title</a>
+                        </li>    
+                       }
+                    </ul>
+                </div>
+</div>
