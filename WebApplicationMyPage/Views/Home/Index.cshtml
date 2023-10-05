@@ -1,8 +1,13 @@
-﻿@{
+﻿@model HomeViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
     <h3 class="display-3">Время, проведенное на даче, в счет жизни не идет</h3>
-    
+    <div>@Model.city</div>
+    <p> 
+    <h4>@$"{Model.Weather.temp}°C"</h4> 
+    <div>@Model.Weather.description</div>
+   </p>
 </div>
